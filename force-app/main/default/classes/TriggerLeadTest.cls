@@ -11,7 +11,8 @@
             Status = 'Contactado',
             Email = 'maria@gmail.com',
             TipoDeEnergiaSolicitada__c = 'Energia Solar',
-            PostalCode = '01001-000'
+            PostalCode = '01001-000',
+            CPF__c = '144.534.421-14'
         );
         
         // Insere o lead criado

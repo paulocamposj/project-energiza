@@ -1,9 +1,9 @@
 // Declaração do trigger que é executado antes da atualização de registros da tabela Opportunity.
-trigger TriggerOpportunity on Opportunity (before update) {
+trigger TriggerOpportunity on Opportunity (after update) {
     
     // Verifica se o trigger é executado antes da atualização.
     // Verifica se a atualização foi uma atualização dos registros.
-    if(trigger.isBefore && trigger.isUpdate){
+    if(trigger.isAfter && trigger.isUpdate){
         
         // Declara uma lista vazia de tarefas para serem criadas.
         List<Task> task = new List<Task>();

@@ -1,9 +1,9 @@
 // Declaração do trigger que é executado antes da atualização de registros da tabela Lead.
-trigger TriggerLead on Lead (before update) {
+trigger TriggerLead on Lead (after update) {
     
     // Verifica se o trigger é executado antes da atualização.
     // Verifica se a atualização foi uma atualização dos registros.
-    if(trigger.IsBefore && trigger.IsUpdate){
+    if(trigger.IsAfter && trigger.IsUpdate){
 
         // Declara uma lista vazia de tarefas para serem criadas.
         List<Task> task = new List<Task>();
